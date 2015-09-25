@@ -28,12 +28,14 @@ __author__ = 'pandeesh'
 
 
 def digitalroot(n):
-  if len(str(n)) != 1:
+  if len(str(n)) == 1:
+    return n
+  else:
     j = 0
     for i in range(0,len(str(n))):
         j += int((str(n))[i])
-    digitalroot(j)
-  else:
-    print(n)
+    return digitalroot(j)
 
-digitalroot(345)
+#tests
+k = digitalroot(192)
+print(k)
