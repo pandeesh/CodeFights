@@ -21,5 +21,5 @@ def reverse_number(n):
     return int(str(n)[::-1])
 
 #tests
-x = reverse_number(0)
+x = reverse_number(1213543424)
 print(x)
