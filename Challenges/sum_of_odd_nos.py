@@ -18,15 +18,20 @@ The second integer, 0 < b < 1e8 + 1.
 Return the answer modulo 10000007
 """
 
+__author__ = 'pandeesh'
+
+import math
+
 def sumofoddnumbers(a, b):
-    j = 0
-    for i in range(a,b)[1:]:
-      if i%2 == 0:
-        continue
-      else:
-        j += i
-    return j
+
+    start_pos = math.ceil( a / 2 )
+    end_pos =  math.floor( b / 2 )
+
+    return end_pos ** 2 - start_pos ** 2
 
 #tests
+x = sumofoddnumbers(3,5)
+print(x)
+
 x = sumofoddnumbers(30,4090)
 print(x)
