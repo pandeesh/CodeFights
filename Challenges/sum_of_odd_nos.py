@@ -38,7 +38,7 @@ print(x)
 x = sumofoddnumbers(30,4090)
 print(x)
 
-#profiler test, need to generalize this as an externla module which can be invoked from any other programs
+#profiler test, need to generalize this as an external module which can be invoked from any other programs
 
 profiler = cProfile.Profile()
 profiler.runcall(sumofoddnumbers)
