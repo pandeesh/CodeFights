@@ -21,6 +21,8 @@ Return the answer modulo 10000007
 __author__ = 'pandeesh'
 
 import math
+import cProfile
+import pstats
 
 def sumofoddnumbers(a, b):
 
@@ -35,3 +37,27 @@ print(x)
 
 x = sumofoddnumbers(30,4090)
 print(x)
+
+#profiler test, need to generalize this as an externla module which can be invoked from any other programs
+
+profiler = cProfile.Profile()
+profiler.runcall(sumofoddnumbers)
+
+stat = pstats.Stats(profiler)
+stat.strip_dirs()
+stat.sort_stats('cumulative')
+stat.print_stats()
+
+"""
+/usr/local/bin/python3 /Users/pandeesh/PycharmProjects/untitled/sumofoddnos.py
+1923016
+         4 function calls in 0.000 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.000    0.000 sumofoddnos.py:7(sumofoddnumbers)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method math.ceil}
+        1    0.000    0.000    0.000    0.000 {built-in method math.floor}
+"""
