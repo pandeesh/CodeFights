@@ -27,3 +27,11 @@ def CountingDigits(N):
 #tests
 print(CountingDigits(22))
 
+#alternative
+
+def CountingDigitsAlternate(N):
+  return sum([len(str(i)) for i in range(1,N+1)])
+
+#tests
+print(CountingDigitsAlternate(22))
+
