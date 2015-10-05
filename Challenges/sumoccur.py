@@ -20,6 +20,15 @@ def sumOccur(A):
   for e, n in counter.most_common():
     sum += e * n
   return sum
+  
+  
+#Alternative
+def sumOccur1(A):
+   return sum([ e * n for e,n in Counter(A).most_common()])
+
 
 #tests
 print(sumOccur([1, 1, 1, 2, 2, 3]))
+print(sumOccur1([2, 3, 4, 2, 2, 3]))
+
+
