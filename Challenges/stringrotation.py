@@ -23,7 +23,7 @@ def stringRotation(A):
 
 #without using itertools.permutations
 def stringRotation_1(A):
-    if len(A[0]) == len(A[1]) and (A[0] + A[1]).find(A[1]):
+    if len(A[0]) == len(A[1]) and (A[0] + A[0]).find(A[1]):
        return "YES"
     return "NO"
     
