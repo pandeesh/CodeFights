@@ -27,6 +27,14 @@ def RankOfElement(A, i):
        if A[k] < A[i]:
         cnt += 1
    return cnt
+
+#another version
+def RankOfElement_1(A, i):
+   c = 0 
+   for j in range(len(A)):
+       if j<i and A[j] <= A[i] or j>i and A[j] < A[i]:
+               c += 1
+   return c
    
 #tests
 print(RankOfElement([3,2,3,4,1],0))
