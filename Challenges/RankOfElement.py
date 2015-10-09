@@ -41,5 +41,12 @@ def RankOfElement_1(A, i):
 def RankOfElement_2(A, i):
    return sum(j<i and A[j] <= A[i] or j>i and A[j] < A[i] for j in range(len(A)))
    
+
+#one more
+def RankOfElement(A, i):
+   return sum(j<i and A[j] <= A[i] or A[j] < A[i] for j in range(len(A)))
+   
 #tests
 print(RankOfElement([3,2,3,4,1],0))
+
+
