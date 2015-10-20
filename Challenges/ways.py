@@ -16,7 +16,7 @@ W(4, 2) % 2 = 1
 
 W(n, m) % 2
 
-(After an analysis, i found that the generic formual is (n * m) - 1 when n != m)
+(After an analysis, I found that the generic formual is (n * m) - 1 when n != m)
 """
 
 def ways(n, m):
