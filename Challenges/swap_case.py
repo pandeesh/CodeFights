@@ -10,6 +10,10 @@ SC("54236cdsckjbjk!#AADC") = "54236CDSCKJBJK!#aadc"
 
 [output] string
 
+Later found the swapcase() in the standard str library which makes this easier:
+
+SC = lambda x: x.swapcase()
+
 """
 def SC(s):
    n = []
