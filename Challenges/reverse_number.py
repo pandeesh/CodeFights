@@ -20,6 +20,9 @@ def reverse_number(n):
         return int(str(n)[::-2])
     return int(str(n)[::-1])
 
+#update: 04/15/2019: looks like the below is the simple approach
+def reverse_number(n):
+    return int(str(n)[::-1])
 #tests
 x = reverse_number(1213543424)
 print(x)
